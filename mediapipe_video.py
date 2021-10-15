@@ -5,13 +5,9 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
 # For static images:
-IMAGE_FILES = []
+IMAGE_FILES = ['data/Tiger_Woods.png']
 BG_COLOR = (192, 192, 192) # gray
-with mp_pose.Pose(
-    static_image_mode=True,
-    model_complexity=2,
-    enable_segmentation=True,
-    min_detection_confidence=0.5) as pose:
+with mp_pose.Pose(static_image_mode=True,model_complexity=2,enable_segmentation=True,min_detection_confidence=0.5) as pose:
   for idx, file in enumerate(IMAGE_FILES):
     image = cv2.imread(file)
     image_height, image_width, _ = image.shape
