@@ -1,7 +1,2 @@
 .env
-datasets/*.mp4
-model/mpi.caffemodel
-opencv_tutorial
-opencv_tutorial/*
-notes.txt
-*draft*
+/data/
